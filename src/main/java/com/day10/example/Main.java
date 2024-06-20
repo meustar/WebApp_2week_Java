@@ -5,11 +5,20 @@ public class Main {
 
         int lastId = 0;
 
-        Article article1 = new Article();
-        System.out.println(article1.id);
+//        Article article1 = new Article();
+//        Article article2 = new Article();
+        Article[] articles = new Article[10];   // 글을 담을 서류폴더
+        articles[0] = new Article();
+        articles[1] = new Article();
+        articles[2] = new Article();
 
-        Article article2 = new Article();
-        System.out.println(article2.id);
+        for (int i = 0; i < 3; i++) {
+            System.out.println(articles[i].id);
+        }
+
+        System.out.println(articles[0].id);
+        System.out.println(articles[1].id);
+        System.out.println(articles[2].id);
 
     }
 }
@@ -28,6 +37,7 @@ class Article {
     String regDate;
 
     Article() {
+//        this(lastId)
         lastId++;
         this.id = lastId;
     }
